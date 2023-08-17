@@ -12,10 +12,10 @@ class Rectangle:
         self.length = length
         self.width = width
 
-    def area(self):
+    def Area(self):
         return self.length * self.width
 
-    def perimeter(self):
+    def Perimeter(self):
         return 2 * (self.length + self.width)
 
 class Circle:
@@ -24,10 +24,10 @@ class Circle:
         self.center_y = center_y
         self.radius = radius
 
-    def area(self):
+    def Area(self):
         return 3.14159 * self.radius ** 2
 
-    def perimeter(self):
+    def Perimeter(self):
         return 2 * 3.14159 * self.radius
 
     def is_inside(self, x, y):
@@ -49,22 +49,22 @@ class Bank:
         else:
             return "Insufficient funds"
 
-# Point3D example
+
 my_point = Point3D(1, 2, 3)
 print("Point3D:", my_point)
 
-# Rectangle example
+
 my_rectangle = Rectangle(4, 3)
-print("Rectangle Area:", my_rectangle.area())
-print("Rectangle Perimeter:", my_rectangle.perimeter())
+print("the area of the rectangle:", my_rectangle.area())
+print("the perimeter of the rectangle:", my_rectangle.perimeter())
 
-# Circle example
+
 my_circle = Circle(0, 0, 5)
-print("Circle Area:", my_circle.area())
-print("Circle Perimeter:", my_circle.perimeter())
-print("Is Inside Circle:", my_circle.is_inside(3, 4))
+print("the area of the cirlce:", my_circle.area())
+print("the perimeter of the circle:", my_circle.perimeter())
+print(" Inside Circle:", my_circle.is_inside(3, 4))
 
-# Bank Account example
+
 my_account = Bank(1000)
-print("Balance after deposit:", my_account.deposit(500))
-print("Balance after withdrawal:", my_account.withdraw(300))
+print("Balance after you deposit:", my_account.deposit(500))
+print("Balance after you withdrawal:", my_account.withdraw(300))
