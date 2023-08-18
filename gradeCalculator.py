@@ -15,27 +15,27 @@ def calculate_grade(percentage):
     else:
         return 'F'
 
-number_students = int(input("Enter the number of students: "))
-number_subjects = int(input("Enter the number of subjects: "))
+number_students = int(input("input the number of students: "))
+number_subjects = int(input("input the number of subjects: "))
 
 grades = []
 
 for student in range(number_students):
-    print(f"Enter marks for student {student + 1}:")
-    student_marks = []
+    print(f"Enter grades for student {student + 1}:")
+    student_grades = []
     for subject in range(number_subjects):
         mark = float(input(f"Subject {subject + 1}: "))
-        student_marks.append(mark)
-    grades.append(student_marks)
+        student_grades.append(mark)
+    grades.append(student_grades)
 
-marks_array = np.array(grades)
+grades_array = np.array(grades)
 
-total_marks = np.sum(marks_array, axis=1)
-percentage_array = (total_marks / (number_subjects * 100)) * 100
+total_grades = np.sum(grades_array, axis=1)
+percentage_array = (total_grades / (number_subjects * 100)) * 100
 
 grades = [calculate_grade(percentage) for percentage in percentage_array]
 
 print("\nResult:")
-print("Student\tTotal Marks\tPercentage\tGrade")
+print("Student\tTotal Grades\tPercentage\tGrade")
 for student in range(number_students):
-    print(f"{student + 1}\t{total_marks[student]}\t\t{percentage_array[student]:.2f}%\t\t{grades[student]}")
+    print(f"{student + 1}\t{total_grades[student]}\t\t{percentage_array[student]:.2f}%\t\t{grades[student]}")
