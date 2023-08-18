@@ -39,3 +39,4 @@ print("\nResult:")
 print("Student\tTotal Grades\tPercentage\tGrade")
 for student in range(number_students):
     print(f"{student + 1}\t{total_grades[student]}\t\t{percentage_array[student]:.2f}%\t\t{grades[student]}")
+
