@@ -28,7 +28,6 @@ def extract_article_text(soup):
     
     return article_text
 
-# 1.4) Write a function to collect every link that redirects to another Wikipedia page
 def collect_internal_links(soup):
     internal_links = []
     for link in soup.find_all('a', href=True):
@@ -36,7 +35,6 @@ def collect_internal_links(soup):
             internal_links.append(link['href'])
     return internal_links
 
-# 1.5) Wrap all the previous functions into a single function
 def scrape_wikipedia_page(url):
     soup = get_parsed_html(url)
     if soup:
@@ -52,7 +50,6 @@ def scrape_wikipedia_page(url):
     else:
         return None
 
-# 1.6) Test the last function on a Wikipedia page of your choice
 wikipedia_url = "https://en.wikipedia.org/wiki/Python_(programming_language)"
 result = scrape_wikipedia_page(wikipedia_url)
 if result:
